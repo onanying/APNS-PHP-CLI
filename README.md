@@ -8,7 +8,7 @@ PHP版本iOS消息推送APNS；分为Push、Feedback两部分：Push负责消息
 
 ### 范例 (Sample)
 
-> sample_push.php
+> sample_push.php 
 
 > sample_feedback.php
 
