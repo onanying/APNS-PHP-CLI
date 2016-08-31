@@ -16,6 +16,11 @@ PHP版本iOS消息推送APNS；分为Push、Feedback两部分：Push负责消息
 在cli模式下运行
 
 ```
+// Windows
 php sample_push.php
 php sample_feedback.php
+
+// Linux (可脱离终端)
+nohup php sample_push.php &
+nohup php sample_feedback.php &
 ```
