@@ -21,6 +21,6 @@ php sample_push.php
 php sample_feedback.php
 
 // Linux (可脱离终端)
-nohup php sample_push.php &
-nohup php sample_feedback.php &
+nohup php sample_push.php >/dev/null 2>&1 &
+nohup php sample_feedback.php >/dev/null 2>&1 &
 ```

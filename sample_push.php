@@ -19,7 +19,7 @@ function send($conf)
     $push->connect($conf);
     while (true) {
         // 从数据库取出待发送的消息
-
+		# code ..
         // 发送
         $push->send('ad07852bc07894be55d798fa5128987bb85387f606d3be4df7365a18063ce3d1', '一条新消息', 8);
     }

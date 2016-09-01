@@ -20,7 +20,7 @@ function receive($conf)
     $data = $feedback->receive();
     if (!empty($data)) {
         // 剔除无效deviceToken
-
+		# code ..
     } else {
         log_info('push', 'Not to receive data');
     }
