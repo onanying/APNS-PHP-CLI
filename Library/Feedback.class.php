@@ -27,7 +27,7 @@ class Feedback extends Base
         while (!@feof($this->socket)) {
             // 读取数据
             $tmpBuffer = @fread($this->socket, 8192);
-            if ($tmpBuffer === false) {
+            if ($tmpBuffer == false) {
                 throw new Exception('Failed to fread');
             }
             $buffer .= $tmpBuffer;

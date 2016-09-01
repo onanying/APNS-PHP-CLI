@@ -38,7 +38,7 @@ class Push extends Base
         // 发送
         $fwriteLen = @fwrite($this->socket, $binary, strlen($binary));
         // 写入失败
-        if ($fwriteLen === false) {
+        if ($fwriteLen == false) {
             throw new Exception('Failed to fwrite');
         }
         return $fwriteLen;
