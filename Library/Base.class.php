@@ -21,7 +21,7 @@ abstract class Base
         stream_context_set_option($stream, 'ssl', 'local_cert', $params['local_cert']);
         stream_context_set_option($stream, 'ssl', 'passphrase', $params['passphrase']);
         // 建立连接
-        $this->socket = stream_socket_client($this->services[$this->servicesSelect], $err, $errStr, 60, STREAM_CLIENT_CONNECT | STREAM_CLIENT_PERSISTENT, $stream);
+        $this->socket = stream_socket_client($this->services[$this->servicesSelect], $err, $errStr, 60, STREAM_CLIENT_CONNECT, $stream);
         if (!$this->socket) {
             throw new Exception("Failed to connect: {$err} {$errStr}");
         }

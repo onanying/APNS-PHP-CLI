@@ -5,5 +5,5 @@
  * @author 刘健 <59208859>
  */
 spl_autoload_register(function ($class) {
-    include 'library/' . $class . '.class.php';
+    include 'Library' . DIRECTORY_SEPARATOR . $class . '.class.php';
 });

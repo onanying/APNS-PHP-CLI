@@ -12,6 +12,16 @@ class Push extends Base
         'tls://gateway.sandbox.push.apple.com:2195', // 产品状态服务器地址
     );
 
+    public function __construct($params = array())
+    {
+        empty($params) or $this->connect($params);
+    }
+
+    public function __destruct()
+    {
+        $this->disconnect();
+    }
+
     // 发送消息
     public function send($deviceToken, $alert, $badge = null, $sound = 'default')
     {
@@ -21,7 +31,7 @@ class Push extends Base
             'sound' => $sound,
         );
         if (!is_null($badge)) {
-            $body['aps']['badge'] = $badge;
+            $body['aps']['badge'] = (int) $badge;
         }
         $payload = json_encode($body);
         // 打印日志

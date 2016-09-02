@@ -6,9 +6,9 @@
  */
 function log_err($tag, $message)
 {
-    $content = date('Y-m-d H:i:s') . " | {$tag} | {$message}" . PHP_EOL;
+    $content = date('Y-m-d H:i:s') . " | ERROR | {$tag} | {$message}" . PHP_EOL;
     print $content;
-    file_put_contents('error.log', $content, FILE_APPEND);
+    file_put_contents('Log/error.log', $content, FILE_APPEND);
 }
 
 /**
@@ -17,7 +17,7 @@ function log_err($tag, $message)
  */
 function log_info($tag, $message)
 {
-    $content = date('Y-m-d H:i:s') . " | {$tag} | {$message}" . PHP_EOL;
+    $content = date('Y-m-d H:i:s') . " | INFO | {$tag} | {$message}" . PHP_EOL;
     print $content;
-    file_put_contents('info.log', $content, FILE_APPEND);
+    file_put_contents('Log/info.log', $content, FILE_APPEND);
 }

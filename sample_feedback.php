@@ -20,9 +20,11 @@ function receive($conf)
     $data = $feedback->receive();
     if (!empty($data)) {
         // 剔除无效deviceToken
-		# code ..
+        
+        # code ...
+        
     } else {
-        log_info('push', 'Not to receive data');
+        log_info('feedback', 'Not to receive data');
     }
 }
 
@@ -33,5 +35,5 @@ while (true) {
     } catch (Exception $e) {
         log_err('feedback', $e->getMessage());
     }
-    sleep(60 * 10); // 休息一大会儿
+    sleep(60 * 30); // 休息一大会儿
 }

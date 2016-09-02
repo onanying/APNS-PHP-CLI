@@ -18,6 +18,16 @@ class Feedback extends Base
 
     protected $data = array();
 
+    public function __construct($params = array())
+    {
+        empty($params) or $this->connect($params);
+    }
+
+    public function __destruct()
+    {
+        $this->disconnect();
+    }
+
     // 接收消息
     public function receive()
     {
@@ -27,7 +37,7 @@ class Feedback extends Base
         while (!@feof($this->socket)) {
             // 读取数据
             $tmpBuffer = @fread($this->socket, 8192);
-            if ($tmpBuffer == false) {
+            if ($tmpBuffer === false) {
                 throw new Exception('Failed to fread');
             }
             $buffer .= $tmpBuffer;
