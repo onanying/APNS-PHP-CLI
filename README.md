@@ -1,4 +1,4 @@
-﻿# ApnsPHP
+﻿# APNS-PHP-CLI
 
 PHP版本iOS消息推送APNS；分为Push、Feedback两部分：Push负责消息推送，Feedback负责清理过期的deviceToken；APNS我踩了很多坑，原因是对APNS的了解不够透彻，加上恶心的苹果不提供错误反馈；我先后使用了C++、PHP两种语言来开发APNS，其中PHP的socket封装的非常好用，可以很简单的实现功能；C++版本的APNS网上很少开源，待我完善后再开源，请叫我雷锋。
 
